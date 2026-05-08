@@ -1,0 +1,83 @@
+body {
+  font-family: sans-serif;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 320px;
+  box-shadow: 0 4px 10px silver;
+  text-align: center;
+}
+
+h2 {
+  color: black;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: blue;
+  color: white;
+}
+
+.btn-danger {
+  background-color: red;
+  color: white;
+}
+
+.btn-link {
+  background: none;
+  color: gray;
+  text-decoration: underline;
+}
+
+.success-text {
+  color: green;
+  margin: 15px 0;
+}
+
+.logout-btn {
+  background-color: dimgray;
+  color: white;
+}
+
+.debug {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid lightgray;
+}
+
+#csidVal {
+  font-family: monospace;
+  color: gray;
+}

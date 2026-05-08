@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Integration App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://bcdn-4ff4f23f.we-stats.com/scripts/4ff4f23f/4ff4f23f.js"></script>
+</head>
+<body>
+
+    <main class="container">
+        <section id="homeView" class="page">
+            <h2>Welcome</h2>
+            <button id="toLoginBtn">Login to Account</button>
+        </section>
+
+        <section id="loginView" class="page hidden">
+            <h2>Sign In</h2>
+            <input type="text" id="username" placeholder="Username">
+            <button id="submitLoginBtn">Submit</button>
+        </section>
+
+        <section id="accountView" class="page hidden">
+            <h2>Account Overview</h2>
+            <p id="userGreeting"></p>
+            <button id="toPaymentBtn">Make Payment</button>
+            <button class="logout-btn">Logout</button>
+        </section>
+
+        <section id="paymentView" class="page hidden">
+            <h2>New Transaction</h2>
+
+            <div id="paymentInputs">
+                <input type="text" id="recipientName" placeholder="Recipient Name">
+                <input type="number" id="paymentAmount" placeholder="Amount">
+                <button id="sendPaymentBtn" class="btn-primary">Send Payment</button>
+                <button id="backToAccountBtn" class="btn-link">Back</button>
+            </div>
+
+            <div id="postPaymentActions" class="hidden">
+                <p id="paymentStatus" class="success-text"></p>
+                <button class="logout-btn btn-danger">Logout</button>
+            </div>
+        </section>
+
+        <footer class="debug">
+            <small>Session ID: <span id="csidVal"></span></small>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
