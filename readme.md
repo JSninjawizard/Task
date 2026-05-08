@@ -1,4 +1,8 @@
-###Home Assignment Summary
+### ### ### ### ### ### ###
+### Home Assignment Summary
+### ### ### ### ### ### ###
+
+
 ##Phase 1: Frontend Logic
 
 All core requirements were implemented and verified:
