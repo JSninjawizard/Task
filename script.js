@@ -3,6 +3,7 @@ function updateSessionId() {
 
     if (typeof cdApi !== 'undefined') {
         cdApi.setCustomerSessionId(newId);
+        console.log("SDK: Session ID updated ->", newId);
     }
 
     document.getElementById('csidVal').innerText = newId;
@@ -11,6 +12,7 @@ function updateSessionId() {
 function navigateTo(context, viewId) {
     if (typeof cdApi !== 'undefined') {
         cdApi.changeContext(context);
+        console.log("SDK: Context changed to ->", context);
     }
 
     document.querySelectorAll('.page').forEach(page => page.classList.add('hidden'));
@@ -24,7 +26,7 @@ function navigateTo(context, viewId) {
 
 const handleLogin = () => {
     const username = document.getElementById('username').value || "Guest";
-    document.getElementById('userGreeting').innerText = "Welcome back, " + username;
+    document.getElementById('userGreeting').innerText = `Welcome back, ${username}`;
     navigateTo("account_overview", "accountView");
 };
 
@@ -39,18 +41,22 @@ const handlePayment = () => {
 
     document.getElementById('paymentInputs').classList.add('hidden');
     document.getElementById('postPaymentActions').classList.remove('hidden');
-    document.getElementById('paymentStatus').innerText = "Sent $" + amount + " to " + recipient;
+    document.getElementById('paymentStatus').innerText = `Sent $${amount} to ${recipient}`;
 };
 
 const handleLogout = () => {
     updateSessionId();
+
     document.querySelectorAll('input').forEach(input => input.value = '');
+
     navigateTo("home_screen", "homeView");
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+
     updateSessionId();
     navigateTo("home_screen", "homeView");
+
 
     document.getElementById('toLoginBtn').addEventListener('click', () => navigateTo("login_screen", "loginView"));
     document.getElementById('submitLoginBtn').addEventListener('click', handleLogin);
